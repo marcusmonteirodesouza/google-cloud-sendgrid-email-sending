@@ -1,4 +1,6 @@
-# Google Cloud - Email Sending recipes
+# Google Cloud - SendGrid Email Sending
+
+This is an example of how to send email in [Google Cloud](https://cloud.google.com/) via [SendGrid](https://sendgrid.com/).
 
 ## Deployment
 
@@ -6,6 +8,8 @@ The system is deployed using [`terraform`](https://www.terraform.io/), running i
 
 ### Pre-requisites
 
+1. [Create an API key](https://app.sendgrid.com/guide/integrate/langs/nodejs) in SendGrid.
+1. [Set up domain authentication](https://docs.sendgrid.com/ui/account-and-settings/how-to-set-up-domain-authentication) in SendGrid.
 1. Create a Google Cloud  [Organization](https://cloud.google.com/resource-manager/docs/creating-managing-organization).
 1. Install [`terraform`](https://developer.hashicorp.com/terraform/downloads).
 1. Install the [`gcloud` CLI](https://cloud.google.com/sdk/docs/install).
@@ -25,7 +29,6 @@ This is the process that creates the Google Cloud [Project](https://cloud.google
 1. Run `terraform init` and answer `yes`.
 1. [Create a Cloud Source Repository](https://cloud.google.com/source-repositories/docs/creating-an-empty-repository#gcloud) in the project your just created. Optionally, [fork this repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo) and create a Cloud Source Repository by [mirroring your forked repo](https://cloud.google.com/source-repositories/docs/mirroring-a-github-repository). Update the `sourcerepo_name` variable with the repository name.
 1. Run `terraform apply`.
-1. If you have errors related to granting permissions to the [Google Storage Service Agent](https://cloud.google.com/iam/docs/service-agents), you can go to your project's Google Cloud console, then go to Cloud Storage -> Settings and check for the presence of the Service Agent. Then re-run `terraform apply`.
 
 ### Deployment
 
