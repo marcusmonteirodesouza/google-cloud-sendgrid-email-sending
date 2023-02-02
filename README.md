@@ -18,9 +18,9 @@ It expects a message with the following structure:
 
 ```json
 {
-    "to": "recipient@example.com",
-    "subject": "My email subject",
-    "body": "<h1>The email body can be html</h1>"
+  "to": "recipient@example.com",
+  "subject": "My email subject",
+  "body": "<h1>The email body can be html</h1>"
 }
 ```
 
@@ -32,7 +32,7 @@ The system is deployed using [`terraform`](https://www.terraform.io/), running i
 
 1. [Create an API key](https://app.sendgrid.com/guide/integrate/langs/nodejs) in SendGrid.
 1. [Set up domain authentication](https://docs.sendgrid.com/ui/account-and-settings/how-to-set-up-domain-authentication) in SendGrid.
-1. Create a Google Cloud  [Organization](https://cloud.google.com/resource-manager/docs/creating-managing-organization).
+1. Create a Google Cloud [Organization](https://cloud.google.com/resource-manager/docs/creating-managing-organization).
 1. Install [`terraform`](https://developer.hashicorp.com/terraform/downloads).
 1. Install the [`gcloud` CLI](https://cloud.google.com/sdk/docs/install).
 
@@ -57,5 +57,5 @@ This is the process that creates the Google Cloud [Project](https://cloud.google
 This is a Cloud Build [build](https://cloud.google.com/build/docs/overview#how_builds_work) that actually deploys the system.
 
 1. The pipeline can be triggered by either:
-    * Push a commit to your Cloud Source Repository or to your Github fork.
-    * Go to your project's [Cloud Build Dashboard](https://console.cloud.google.com/cloud-build/triggers) and manually run the `push-to-branch-deployment` [trigger](https://cloud.google.com/build/docs/triggers).
+   - Push a commit to your Cloud Source Repository or to your Github fork.
+   - Go to your project's [Cloud Build Dashboard](https://console.cloud.google.com/cloud-build/triggers) and manually run the `push-to-branch-deployment` [trigger](https://cloud.google.com/build/docs/triggers).
