@@ -33,7 +33,7 @@ resource "google_pubsub_topic" "sendgrid" {
   name = "sendgrid"
 }
 
-resource "google_cloudfunctions2_function" "sengrid" {
+resource "google_cloudfunctions2_function" "sendgrid" {
   provider    = google-beta
   name        = "sendgrid"
   location    = var.region
