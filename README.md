@@ -1,6 +1,6 @@
 # Google Cloud - SendGrid Email Sending
 
-This is an example of how to send email in [Google Cloud](https://cloud.google.com/) via [SendGrid](https://sendgrid.com/).
+This is an example of how to send emails in [Google Cloud](https://cloud.google.com/) via [SendGrid](https://sendgrid.com/).
 
 ## System Overview
 
