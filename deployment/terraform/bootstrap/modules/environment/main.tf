@@ -6,6 +6,7 @@ locals {
     "roles/eventarc.admin",
     "roles/iam.serviceAccountUser",
     "roles/pubsub.admin",
+    "roles/storage.admin"
   ]
 
   compute_sa_email = "${data.google_project.project.number}-compute@developer.gserviceaccount.com"
