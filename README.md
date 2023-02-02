@@ -14,7 +14,7 @@ This is an example of how to send email in [Google Cloud](https://cloud.google.c
 
 A [Pub/Sub triggered Cloud Function](https://cloud.google.com/functions/docs/calling/pubsub) that sends emails using [SendGrid](https://sendgrid.com/).
 
-It expects a message with following structure:
+It expects a message with the following structure:
 
 ```json
 {
