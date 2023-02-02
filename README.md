@@ -2,6 +2,28 @@
 
 This is an example of how to send email in [Google Cloud](https://cloud.google.com/) via [SendGrid](https://sendgrid.com/).
 
+## System Overview
+
+## Architecture Diagram
+
+![system architecture diagram](./images/system-architecture-diagram.png)
+
+## Components
+
+### [sendgrid Cloud Function](./cloud-functions/sendgrid)
+
+A [Pub/Sub triggered Cloud Function](https://cloud.google.com/functions/docs/calling/pubsub) that sends emails using [SendGrid](https://sendgrid.com/).
+
+It expects a message with following structure:
+
+```json
+{
+    "to": "recipient@example.com",
+    "subject": "My email subject",
+    "body": "<h1>The email body can be html</h1>"
+}
+```
+
 ## Deployment
 
 The system is deployed using [`terraform`](https://www.terraform.io/), running in [Cloud Build](https://cloud.google.com/build/docs/overview).
